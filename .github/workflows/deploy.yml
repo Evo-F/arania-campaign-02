@@ -1,0 +1,74 @@
+name: Self-Contained Quartz Deployment on GH Pages
+############# Set trigger events for the workflow.
+on:
+  push:
+    branches:
+      - main
+############# Boilerplate permissions to make the thing work.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+############# Concurrency settings.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+############# The actual jobs themselves.
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      ############# Checks out a copy of Quartz onto our runner, under the ./quartz subdirectory.
+      - uses: actions/checkout@v4
+        with:
+          repository: jackyzha0/quartz
+          path: './quartz'
+          fetch-depth: 0 # Fetch all history for git info
+      ############# Checks out our own directory onto our runner, under the ./markdown subdirectory.
+      - uses: actions/checkout@v4
+        with:
+          path: './markdown'
+          fetch-depth: 0
+      ############# Copies the contents of our repo into the quartz/content directory.
+      ############# This is the directory of .md files that Quartz will build our site from.
+      - name: Copy MD To Quartz
+        run: |
+          shopt -s extglob
+          cd ./markdown/.quartz
+          echo "We are in .quartz"
+          ls -l
+          echo "Moving stuff to core Quartz directory..."
+          mv -f * ../../quartz
+          echo "Contents of current directory:"
+          ls -l
+          echo "Contents of core Quartz directory:"
+          ls -l ../../quartz
+          cd ..
+          cp -r * ../quartz/content
+          
+      ############# Set up NodeJS on our runner.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      ############# Actually configure and build Quartz, which we have to do before our runner can use it.
+      - name: Install Dependencies + Build
+        working-directory: ./quartz
+        run: |
+          npm ci
+          npx quartz build
+      ############# Once Quartz is built, sends all the rendered HTML files to GitHub Pages.
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./quartz/public
+ 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
