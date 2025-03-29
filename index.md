@@ -16,7 +16,7 @@ Currently in this campaign, the date is 22 August 225 3C.
 - Wood Elf
 - Level 1 Paladin
 
-Alastar Vale is the last surviving member of House Vale, a former Ch'inguan Noble House that was wiped out in a violent attack that destroyed their city. Although reasonably educated as a youth of nobility, Alastar seeks to further develop his knowledge of history, in the hopes of discovering who was behind his family's murder and the destruction of his home. On this journey, Alastar is tutored and guided by Professor Aligar.
+Alastar Vale grew up in the city of Easton Hope, located on the island of Nog just south of the Ch'inguan mainland. Alastar is the last surviving member of House Vale, a Ch'inguan Noble House that was wiped out in a violent attack that also destroyed their city. Although reasonably educated as a youth of nobility, Alastar seeks to further develop his knowledge of history, in the hopes of discovering who was behind his family's murder and the destruction of his home. On this journey, Alastar is tutored and guided by Professor Aligar.
 
 ## Astrid Dreamspire
 - High Elf
