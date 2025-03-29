@@ -13,7 +13,7 @@ The Party has had a relatively uneventful first week at The Academy, taking the 
 Although The Academy lacks a formal course of study, the start of the second week of any new year is typically when faculty advisors issue their first true assignments to their students. These initial assignments are typically the first test of a student's character and initiative, and almost always involve them leaving Academy grounds for a period of time. As it happens, all five members of The Party have been dispatched to the nearby town of Drayside:
 - **Alastar** is to collect some correspondence from the mainland. It is implied by Professor Aligar that this correspondence is sensitive and has some direct relevance to Alastar.
 - **Astrid** is to collect a bulk order of 10 Potions of Healing, to be used in experiments. Professor Mirias intends to test new methods of strengthening and amplifying the potions. 
-- **Elowen** is to collect an Amulet of Minor Warding ^[Increases the wearer's Armor Class by 1 when worn.], a minor magical artifact that produces a gentle force to deflect blows away from the wearer. It is unclear why Professor Zenarei needs this Amulet.
+- **Elowen** is to collect an Amulet of Minor Warding [^1], a minor magical artifact that produces a gentle force to deflect blows away from the wearer. It is unclear why Professor Zenarei needs this Amulet.
 - **Icarus** is to return a collection of books that were loaned to Professor Berak from a bookstore. These books were meant to be returned several years ago.
 - **Silas** is to collect a custom-made Greatclub from a weaponsmith that Professor Berak has some rapport with. Although such implements are typically meant to be ornamental, Professor Berak intends to use it as a proper weapon; it is not clear why.
 
@@ -29,3 +29,6 @@ Dire Wolves in this part of Arania are not necessarily aggressive, but they are 
 At this stalemate, Silas had an idea - using his *Mage Hand*, he would try to lure the Dire Wolves off the road using a portion of Alastar's rations. While the rations did get the Wolves' attention, one of the wolves was able to quickly snap the rations right out of Silas' spectral hand, removing the distraction entirely. A fight was inevitable.
 
 ***To Be Continued...***
+
+---
+[^1]: Increases the wearer's Armor Class by 1 when worn.
